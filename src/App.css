@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+.App {
+  text-align: center;
+}
+.Hero-section{
+  display: flex;
+  margin-top: 15%;
+  justify-content: space-between;
+  padding-left: 15%;
+  padding-right: 25%;
+  margin-bottom:15%;
+  color: white;
+}
+.Hero-section .text{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.sec1{
+  background-color: rgba(255,255,255,0.3);
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 45px;
+  padding-left: 5%;
+  padding-bottom: 0%;
+  margin-bottom: 5%;
+  padding-right: 5%;
+  border: 1px solid white;
+  display: flex;
+}
+.sec1 .img{
+  height: 45vh;
+  width: 15vw;
+  margin-top: -15%;
+  padding-bottom:5% ;
+  padding-right: 15%;
+  margin-right: 15%;
+}
+.sec1 .desc{
+  padding-top: 5%;
+  padding-left: 5%;
+  text-align: left;
+  color: white;
+}
+.sec1 .desc h1{
+  display: flex;
+  flex-direction: column;
+}
+.sec1 .desc h1 .text-1{
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+.sec1 .desc h1 .text-2{
+  font-family: 'Anton', sans-serif;
+  font-size: 5vh;
+}
+
+.text1{
+  font-family: 'Sedgwick Ave Display', cursive;
+  margin-bottom: 0;
+  color: white;
+  font-size: 35px;
+}
+
+.text2{
+  font-family: 'Anton', sans-serif;
+  font-size: 80px;
+  margin-top: -25px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.lesgo{
+  margin-top: 0;
+  background-color: white;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.lesgo:hover{
+  cursor: pointer;
+}
+
+.sec1 .divider{
+  margin-top: 1%;
+  height: 43vh;
+  margin-left: 5%;
+  border: 2px solid white;
+}
+.Hero-section .text .text-1,.Hero-section .text .text-3{
+  font-size: 5vh;
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+.Hero-section .text .text-2{
+  font-size: 20vh;
+  line-height: 80%;
+  transition: 0.5s;
+  font-family: 'Anton', sans-serif;
+}
+.frames .frame1{
+  position: absolute;
+  z-index: 1;
+  width: 20%;
+  right: 20%;
+}
+.frames .frame2{
+  position: absolute;
+  z-index: 0;
+  width: 20%;
+  margin-top: -5%;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

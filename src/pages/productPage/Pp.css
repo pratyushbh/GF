@@ -1,0 +1,103 @@
+.Product{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Abel', sans-serif;
+    background-color: black;
+}
+.P_table{
+    align-self: center;
+    border: 1px white solid;
+    border-radius: 5px;
+    width: 70vw;
+    margin-bottom: 15vh;
+    display: flex;
+}
+.P_heading{
+    font-size: 5vw;
+    font-family: 'Anton', sans-serif;
+}
+.P_cards{
+    margin-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.P_Lside{   
+    padding-top: 3vh;
+    text-align: left;
+    border-right: 1px white solid;
+    background-image: url('../../assets/bg2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.P_Lside h1{
+    margin-left: 5vw;
+    margin-top: 20vh;
+}
+.P_Lside h2{
+    margin-left: 5vw;
+}
+.P_category{
+    margin-left: 5vw;
+    font-size: 1.5vw;
+    padding-left: 0vw;
+    text-align: center;
+    width: 8vw;
+    border:1px white solid;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+} 
+.P_Rside{
+    padding-top: 3vh;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    border-left: 1px white solid;
+    text-align: left;
+}
+.P_Rside h2{
+    font-size: 3vw;
+    line-height: 0%;
+}
+.P_rating{
+    display: flex;
+    justify-content: space-between;
+}
+.P_rating span{
+    font-size: 3vw;
+}
+.P_price{
+    font-size: 2vw;
+    margin-bottom: 10vh;
+}
+.P_price h3{
+    line-height: 0.7;
+}
+.P_buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.P_buttons .Button1{
+    font-size: 2vw;
+    padding-left: 1.5vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-right: 1.5vw;
+    font-family: 'Abel', sans-serif;
+    border:1px white solid;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+}
+.P_buttons .Button2{
+    font-size: 2vw;
+    padding-left: 1.5vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-right: 1.5vw;
+    border:1px white solid;
+    font-family: 'Abel', sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+}

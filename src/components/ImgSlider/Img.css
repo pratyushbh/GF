@@ -1,0 +1,23 @@
+.Img{
+    height: 35vh;
+    width:35vw;
+    color: white;
+}
+img {
+    width: 50%;
+}
+.main-Slider{
+    padding-top: 1%;
+}
+.carousel .slider-wrapper{
+    width: 80%;
+    height: 50vh;
+}
+.carousel .thumb{
+    width:5%;
+    height: 50px;
+    display:none;
+}
+.carousel{
+    text-align: center;
+}

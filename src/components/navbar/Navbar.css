@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+.Navbar{
+    background-color: black;
+    color: white;
+    display: flex;
+    padding-left: 5%;
+    padding-right: 10%;
+    justify-content: space-between;
+}
+.Navbar .logo{
+    font-family: 'Anton', sans-serif;
+}
+.walletActive{
+    display: block;
+}
+.walletActive .walletDisplay{
+    display: flex;
+}
+.walletActive .walletDropdown{
+    border-radius: 10px;
+    position: absolute;
+    background-color: gray;
+}
+.walletDropdown ul{
+    list-style-type: none;
+    text-align: left;
+    padding-right: 3vw;
+}
+.walletDropdown ul li{
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5vw;
+}
+.Navbar .elements{
+    padding-top: 0.5%;
+    display: flex;
+    font-family: 'PT Sans Narrow', sans-serif;
+
+    justify-content: space-evenly;
+}
+.Navbar .elements .item{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.Navbar .elements  img{
+    height: 50%;
+    margin-top: 5%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}

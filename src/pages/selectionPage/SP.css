@@ -1,0 +1,36 @@
+.SP{
+    color:white;
+    font-family: 'Anton', sans-serif;
+    background-color: black;
+}
+.sp_h1{
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 5vh;
+}
+.sp_h2{
+    line-height:0%;
+}
+.sp_cards{
+    margin-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sp_listItem{
+    margin-left: 5%;
+    color: gray;
+    font-family: 'Abel', sans-serif;
+    cursor: pointer;
+}
+.sp_listItem:hover{
+    color: white;
+}
+.sp_heading{
+    padding-top: 15px;
+    margin-left: 15%;
+    font-size: 5vh;
+    text-align: left;
+}
+.sp_content .sp_list{
+    display: flex;
+    list-style-type: none;
+}
