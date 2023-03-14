@@ -1,13 +1,19 @@
-import React from 'react'
+import React,{useContext, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import Card from '../../components/card/Card';
 import Img from '../../components/ImgSlider/Img';
 import './Pp.css'
 import img from '../../assets/img.jpg'
 import { Link } from 'react-router-dom';
+import { NFTData } from '../../context/Items/ItemContext';
 
 const Pp = () => {
-  let {name,author,price}= useParams();
+  let {name,author,price,id}= useParams();
+  const {nftdata}=useContext(NFTData);
+  useEffect(()=>{
+    console.log(nftdata[0])
+  },
+  [])
   let data=[
     {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
     {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},

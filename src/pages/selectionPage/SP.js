@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from '../../components/card/Card'
 import { motion } from "framer-motion"
 import './SP.css'
 import img from '../../assets/img.jpg'
+import { NFTData } from '../../context/Items/ItemContext'
 
 const SP = () => {
+    const {nftdata}=useContext(NFTData);
+    console.log(nftdata[0])
     const container = {
         hidden: { opacity: 1, scale: 0 },
         visible: {
