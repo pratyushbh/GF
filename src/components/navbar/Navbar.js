@@ -71,7 +71,7 @@ function Navbar() {
                     <li
                       onClick={() => {
                         setIsVisible(true);
-                        setWallet(null);
+                        setWallet("");
                       }}
                     >
                       Disconnect
