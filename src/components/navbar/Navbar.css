@@ -36,9 +36,13 @@
     padding-top: 0.5%;
     display: flex;
     font-family: 'PT Sans Narrow', sans-serif;
-
     justify-content: space-evenly;
 }
+
+a{
+    margin-left: 20px;
+}
+
 .Navbar .elements .item{
     margin-left: 10%;
     margin-right: 10%;

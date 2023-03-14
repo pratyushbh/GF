@@ -1,0 +1,59 @@
+.sp--title{
+    color: white;
+}
+
+.dabba{
+    background-color: rgb(196, 192, 192);
+    width: 30%;
+    margin: auto;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dabba:hover{
+    cursor: pointer;
+}
+
+.dabba img{
+    width: 30px;
+    height: 30px;
+}
+
+.nft--form{
+    margin-top: 10px;
+}
+
+.nft--form div input{
+    margin-left: 10px;
+}
+
+.ehh{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.ehh textarea{
+    width: 30%;
+    margin: auto;
+    margin-top: 5px;
+    resize: none;
+    height: 70px;
+    padding: 10px;
+}
+
+.submit-btn{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+}

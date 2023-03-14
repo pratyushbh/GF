@@ -7,15 +7,17 @@ import Pp from "./pages/productPage/Pp";
 import SP from "./pages/selectionPage/SP";
 import { WalletProvider } from "./context/walletContext/walletContext";
 import Footer from "./components/footer/Footer.js";
+import SellingPage from "./pages/sellingPage/SellingPage";
 const App = () => {
   return (
-    <div className='App'>
+    <div className="App">
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/sp' element={<SP />} />
-          <Route path='/product/:name/:price/:author' element={<Pp />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/sp" element={<SP />} />
+          <Route path="/product/:name/:price/:author" element={<Pp />} />
+          <Route path="/SellingPage" element={<SellingPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />

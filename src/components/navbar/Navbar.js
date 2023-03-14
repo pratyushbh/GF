@@ -34,27 +34,31 @@ function Navbar() {
       });
   };
   return (
-    <div className='Navbar'>
-      <Link to='/'>
-        <h1 className='logo'>PARADISE</h1>
+    <div className="Navbar">
+      <Link to="/">
+        <h1 className="logo">PARADISE</h1>
       </Link>
-      <div className='elements'>
-        <h3 className='item'>About</h3>
-        <Link to='/sp'>
-          <h3 className='item'>Discover</h3>
+      <div className="elements">
+        <Link to="/About">
+          <h3 className="item">About</h3>
         </Link>
-        <h3 className='item'>Sell</h3>
+        <Link to="/sp">
+          <h3 className="item">Discover</h3>
+        </Link>
+        <Link to="/SellingPage">
+          <h3 className="item">Sell</h3>
+        </Link>
         {wallet === "" ? (
-          <img className='item' src={icon2} onClick={connectWallet} />
+          <img className="item" src={icon2} onClick={connectWallet} />
         ) : (
           <div
-            className='walletActive'
+            className="walletActive"
             onClick={() => {
               setIsVisible(!isVisible);
             }}
           >
-            <div className='walletDisplay'>
-              <img className='item' src={icon1} />
+            <div className="walletDisplay">
+              <img className="item" src={icon1} />
               <h3>{wallet.slice(0, 10) + "..."}</h3>
             </div>
             {console.log("logged in")}
@@ -62,7 +66,7 @@ function Navbar() {
               <></>
             ) : (
               <>
-                <div className='walletDropdown'>
+                <div className="walletDropdown">
                   <ul>
                     <li
                       onClick={() => {
