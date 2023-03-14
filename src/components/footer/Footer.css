@@ -1,60 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
-.footer{
-    background-color: black;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-top: 10px;
+.footer {
+  background-color: black;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
-.footer-title{
-    color: white;
-    font-family: 'Anton', sans-serif;
-    font-size: 50px;
-    color: white;
-    text-align: left;
-    margin-top: 0px;
-    margin-bottom: 0px;
+.footer-title {
+  color: white;
+  font-family: "Anton", sans-serif;
+  font-size: 50px;
+  color: white;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-.email{
-    text-align: left;
+.email {
+  text-align: left;
 }
 
-.email-input{
-    width: 350px;
-    height: 40px;
-    background-color: black;
-    outline: none;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding-left: 5px;
-    color: white;
+.email-input {
+  width: 350px;
+  height: 40px;
+  background-color: black;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding-left: 5px;
+  color: white;
 }
 
 .arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 4px;
-  }
-  
-  .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+}
 
-  .arrow-btn{
-    width: 45px;
-    height: 45px;
-    margin-left: 10px;
-    background-color: white;
-    outline: none;
-    border: 1px solid black;
-    border-radius: 10px;
-    
-  }
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
 
-  .arrow-btn:hover{
-    cursor: pointer;
-  }
+.arrow-btn {
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  background-color: white;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.arrow-btn:hover {
+  cursor: pointer;
+}
