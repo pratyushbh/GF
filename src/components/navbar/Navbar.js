@@ -71,7 +71,11 @@ function Navbar() {
                     <li
                       onClick={() => {
                         setIsVisible(true);
+<<<<<<< HEAD
                         setWallet("");
+=======
+                        setWallet('');
+>>>>>>> db8cba0 (commiting change)
                       }}
                     >
                       Disconnect
