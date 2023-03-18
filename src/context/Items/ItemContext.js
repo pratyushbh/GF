@@ -8,7 +8,7 @@ export const NFTDprovider=({children})=>{
     useEffect(()=>{
         axios.get("https://grizzly-backend.onrender.com/all-nft")
         .then(response=>{
-          setNftdata(response.data);
+          setNftdata(response.data  );
         })
       },[])
     const value={nftdata,setNftdata};

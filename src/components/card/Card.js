@@ -31,7 +31,7 @@ const Card = (props) => {
       className='Card'
       whileInView={{ opacity: 1, translateY: 0 }}
     >
-      <Link to='/product/abc/123/me/12'>
+      <Link to='/product/12'>
         <div>
           <div className='pic'>
             <img src={img} />

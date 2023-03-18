@@ -8,7 +8,7 @@
     font-size: 5vh;
 }
 .sp_h2{
-    line-height:0%;
+    font-size: 10vw;
 }
 .sp_cards{
     margin-left: 5%;
@@ -17,11 +17,27 @@
 }
 .sp_listItem{
     margin-left: 5%;
-    color: gray;
-    font-family: 'Abel', sans-serif;
+    font-family: 'Questrial', sans-serif;
     cursor: pointer;
 }
-.sp_listItem:hover{
+.on_sp_listItem{
+    margin-left: 5%;
+    font-family: 'Questrial', sans-serif;
+    cursor: pointer;
+}
+.on_sp_listItem button{
+    border: 0;
+    font-size: 1.5vw;
+    background: transparent;
+    color: white;
+}
+.sp_listItem button{
+    border: 0;
+    font-size: 1.5vw;
+    background: transparent;
+    color: gray;
+}
+.sp_listItem button:hover{
     color: white;
 }
 .sp_heading{

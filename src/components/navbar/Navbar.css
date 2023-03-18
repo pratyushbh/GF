@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
 .Navbar{
     background-color: black;
     color: white;
@@ -48,8 +49,25 @@ a{
     margin-right: 10%;
 }
 .Navbar .elements  img{
+    height: 40%;
+    margin-top: 6%;
+}
+.Navbar .elements .item2{
+    width: 30%;
+    margin-top: 7%;
+    margin-left:25%;
+    margin-right: 5%;
+}
+.Search{
+    margin-top: 2.5%;
     height: 50%;
-    margin-top: 5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color: black;
+    color: white;
+    width: 50% ;
+    border-radius: 10px;
+    border: 1px solid white;
 }
 
 a{

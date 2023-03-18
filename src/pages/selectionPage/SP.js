@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState,useEffect } from 'react'
 import Card from '../../components/card/Card'
 import { motion } from "framer-motion"
 import './SP.css'
@@ -7,6 +7,10 @@ import { NFTData } from '../../context/Items/ItemContext'
 
 const SP = () => {
     const {nftdata}=useContext(NFTData);
+    const [section,setSection]=useState("All");
+    useEffect(()=>{
+        const sec=data[section];
+    },[section])
     console.log(nftdata[0])
     const container = {
         hidden: { opacity: 1, scale: 0 },
@@ -19,7 +23,7 @@ const SP = () => {
           }
         }
       };
-      
+
       const item = {
         hidden: { y: 20, opacity: 0 },
         visible: {
@@ -88,6 +92,26 @@ const SP = () => {
             {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
             {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"}
         ],
+        Code:[
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"}
+        ],
+        Tweets:[
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"},
+            {img:{img}, name:"Learn how to generate art with AI", price:"2.34", author:"Creator name"}
+        ]
     }
   return (
     <div className="SP">
@@ -100,15 +124,17 @@ const SP = () => {
         </div>
         <div className='sp_content'>
             <ul className='sp_list'>
-                <li className='sp_listItem'>All</li>
-                <li className='sp_listItem'>Music</li>
-                <li className='sp_listItem'>Digital Art</li>
-                <li className='sp_listItem'>Novels</li>
-                <li className='sp_listItem'>Films</li>
-                <li className='sp_listItem'>Digital Assests</li>
+                <li className={((section==="All")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("All")}>All</button></li>
+                <li className={((section==="Music")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("Music")}>Music</button></li>
+                <li className={((section==="DigitalArt")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("DigitalArt")}>Digital Art</button></li>
+                <li className={((section==="Novels")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("Novels")}>Novels</button></li>
+                <li className={((section==="Films")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("Films")}>Films</button></li>
+                <li className={((section==="DigitalAssets")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("DigitalAssets")}>Digital Assests</button></li>
+                <li className={((section==="Tweets")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("Tweets")}>Tweets</button></li>
+                <li className={((section==="Code")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("Code")}>Code</button></li>
             </ul>
             <div className='sp_cards'>
-                {data.All.map((item)=>{
+                {data[section].map((item)=>{
                     return(
                        <Card img={img} name={item.name} price={item.price} author={item.author}/>
                     )
