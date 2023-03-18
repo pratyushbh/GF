@@ -130,7 +130,7 @@ const SP = () => {
                 <li className={((section==="Novels")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("Novels")}>Novels</button></li>
                 <li className={((section==="Films")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("Films")}>Films</button></li>
                 <li className={((section==="DigitalAssets")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("DigitalAssets")}>Digital Assests</button></li>
-                <li className={((section==="Tweets")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("Tweets")}>Tweets</button></li>
+                <li className={((section==="Tweets")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("Tweets")}>Qoutes</button></li>
                 <li className={((section==="Code")?"on_":"")+'sp_listItem'}><button onClick={()=>setSection("Code")}>Code</button></li>
             </ul>
             <div className='sp_cards'>

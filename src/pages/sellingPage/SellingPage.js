@@ -1,13 +1,28 @@
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
 import {create} from 'ipfs-http-client'
 import {Buffer} from 'buffer'
 import "./SellingPage.css";
 import axios from 'axios'
+import { WalletContext } from "../../context/walletContext/walletContext";
 
 
 const projectId='2N0rfksx1fJkDBXVZgzdzix5IYX'
 const projectSecret="01ba6f1cf1a2a01d0fce17636284e896"
 const auth="Basic "+ Buffer.from(projectId+":"+projectSecret).toString('base64')
+
+const getProvider = async () => {
+  if ("solana" in window) {
+    await window.solana.connect(); // opens wallet to connect to
+
+    const provider = window.solana;
+    if (provider.isPhantom) {
+      console.log("Is Phantom installed?  ", provider.isPhantom);
+      return provider;
+    }
+  } else {
+    document.write("Install https://www.phantom.app/");
+  }
+};
 
 const client= create({
   host:'ipfs.infura.io',
@@ -25,6 +40,7 @@ export default function SellingPage() {
   const [link,setLink]=useState('');
   const [nftname,setNftname]=useState('');
   const [desc,setDesc]=useState('');
+  const { wallet,setWallet } = useContext(WalletContext);
   async function onChange(e){
     const file=e.target.files[0];
     try{
@@ -58,6 +74,9 @@ export default function SellingPage() {
     setDesc(e.target.value);
   }
   const Submit=()=>{
+    if(wallet===""){
+      alert("Connect wallet")
+    } else{
     console.log(img);
     const data=new FormData();
     data.append("file",img)
@@ -70,14 +89,25 @@ export default function SellingPage() {
     .then(res=>{return res.json()})
     .then(async data=>{
       await console.log(data.url);
-      const Bdata = await {name:nftname,desc:desc,imgLink:data.url};
+      const Bdata = await {name:nftname,desc:desc,imgLink:data.url,Owner_wallet:wallet};
       axios.post("https://grizzly-backend.onrender.com/send",Bdata)
       .then(res=>{console.log(res)})
       .catch(err=>{console.log(err.message)})
       console.log(Bdata);
     })
     .catch(err=>{console.log(err.message)})
-  }
+  }}
+  const connectWallet = () => {
+    getProvider()
+      .then((provider) => {
+        console.log("key", provider.publicKey.toString());
+        setWallet(provider.publicKey.toString());
+        console.log(wallet);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
   return (
     <>
     <div className="sp--container">
@@ -93,18 +123,14 @@ export default function SellingPage() {
           <br/>
           <input type="text" onChange={handleName} ></input>
         </div>
-        <h1>IPFS Example</h1>
-      <input
-        type="file"
-        onChange={onChange}
-      />
-      {
-        fileUrl && (
-          <div>
-            <a href={fileUrl} target="_blank">{fileUrl}</a>
-          </div>
-        )
-      }
+        {(wallet === "" )?  (<>
+          <h1>Connect Wallet to create NFT:</h1>
+          <h3 onClick={connectWallet}>Connect</h3>
+          </>)
+        :(<>
+          <h1>Owner's wallet:</h1>
+          <h3>{wallet}</h3>
+        </>)}
         <div className="ehh">
           <h3>Enter NFT Description</h3>
           <textarea onChange={handleDesc} placeholder="A collection of 555 bored apes"></textarea>
